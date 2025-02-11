@@ -1,2 +1,7 @@
 SetEnvIf Request_URI ".*" Ngx_Cache_NoCacheMode=off
 SetEnvIf Request_URI ".*" Ngx_Cache_AllCacheMode
+
+<Files "counter.txt">
+    Order Allow,Deny
+    Deny from all
+</Files>
