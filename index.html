@@ -3,7 +3,7 @@
 <head>
 
   <title>株式会社hogehoge の公式ホームページへようこそ！</title>
-  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <!-- OGP設定 -->
   <meta property="og:title" content="株式会社hogehoge 公式ホームページ">
@@ -37,29 +37,26 @@
   <table width="1000" align="center" border="1" cellspacing="0" cellpadding="10" bgcolor="#FFFFFF">
     <tr>
       <td colspan="2" align="center">
-        <a name="home"></a>
-        <h1>
-          <font size="5">
-            <font color="red">株</font>
-            <font color="orange">式</font>
-            <font color="yellow">会</font>
-            <font color="green">社</font>
-            <font color="blue">h</font>
-            <font color="indigo">o</font>
-            <font color="violet">g</font>
-            <font color="red">e</font>
-            <font color="orange">h</font>
-            <font color="yellow">o</font>
-            <font color="green">g</font>
-            <font color="blue">e</font>
-            <font color="indigo"> </font>
-            <font color="violet">へ</font>
-            <font color="red">よ</font>
-            <font color="orange">う</font>
-            <font color="yellow">こ</font>
-            <font color="green">そ</font>
-            <font color="blue">★</font>
-          </font>
+        <h1 id="home">
+          <font size="5" color="red">株</font>
+          <font size="5" color="orange">式</font>
+          <font size="5" color="yellow">会</font>
+          <font size="5" color="green">社</font>
+          <font size="5" color="blue">h</font>
+          <font size="5" color="indigo">o</font>
+          <font size="5" color="violet">g</font>
+          <font size="5" color="red">e</font>
+          <font size="5" color="orange">h</font>
+          <font size="5" color="yellow">o</font>
+          <font size="5" color="green">g</font>
+          <font size="5" color="blue">e</font>
+          <font size="5" color="indigo"> </font>
+          <font size="5" color="violet">へ</font>
+          <font size="5" color="red">よ</font>
+          <font size="5" color="orange">う</font>
+          <font size="5" color="yellow">こ</font>
+          <font size="5" color="green">そ</font>
+          <font size="5" color="blue">★</font>
         </h1>
         <!-- アクセスカウンター -->
         <font size="2">あなたは <img src="counter.php" alt="アクセスカウンター"> 人目のお客さまです。</font>
@@ -69,8 +66,8 @@
     <!-- スクロールするメッセージ -->
     <tr>
       <td colspan="2" align="center" bgcolor="#000000">
-        <marquee scrollamount="5" behavior="scroll" direction="left">
-          <font color="#FF00FF"><strong>株式会社hogehoge のウェブサイトへようこそ！</strong></font>
+        <marquee scrollamount="5" behavior="alternate" direction="left">
+          <font color="#FF00FF"><strong>🌟 株式会社hogehoge のウェブサイトへようこそ！ 🌟</strong></font>
         </marquee>
       </td>
     </tr>
@@ -87,40 +84,58 @@
         <br>
         <br>
         <!-- 工事中画像 -->
-        <center>
-          <img src="img/yellowcorn.gif" alt="工事中" border="0"><br>
-          <font face="Arial" size="1" color="#FF0000"><blink>現在工事中です</blink></font>
-        </center>
+        <div align="center">
+          <img src="img/yellowcorn.gif" alt="工事中" border="0">
+          <marquee behavior="scroll" direction="up" scrollamount="2" scrolldelay="42" loop="-1" height="20">
+            <div align="center">
+              <font face="Arial" size="1" color="#FF0000">現在工事中です</font>
+            </div>
+          </marquee>
+        </div>
         <!-- /工事中画像 -->
       </td>
       <td valign="top">
 
-        <a name="home"></a>
-        <p>弊社のウェブサイトのURL（<a href="https://hogehoge.co.jp">hogehoge.co.jp</a>）を<br>
-        URL のサンプルとしてご利用いただくことを歓迎しております。</p>
-
-        <p>承諾をいただく必要はございません。ご自由にお使いください。</p>
-
-        <p>ただし、以下の点についてご留意いただきますようお願いいたします。<br>
-        ご想定の範囲の外でこのホームページが表示されてしまうことが考えられます。<br>
-        リンクをしていただいていることで発生したいかなる損害や不具合については弊社は一切の責任を負うことはできませんのでご了承ください。</p>
-
         <p>ご覧いただき、誠にありがとうございます。</p>
 
-        <h2>特徴</h2>
+        <p>弊社のWeb サイトのURL（<a href="https://hogehoge.co.jp">hogehoge.co.jp</a>）を<br>
+          URL のサンプルとしてご利用いただくことを歓迎しております。</p>
+
+        <p>承諾をいただく必要はございません。<br>
+          サンプル用のURL としてご自由にお使いください。</p>
+
+        <p>ただし、以下の点についてご留意いただきますようお願いいたします。<br>
+          ご想定の範囲の外でこのWeb サイトが表示されてしまうことが考えられます。<br>
+          いかなる事象や損害、不具合について弊社は一切の責任を負うことはできませんのでご了承ください。</p>
+
+        <h2 align="center">特徴</h2>
         <p>そのものには意味の無いものであるが、なにものにも置き換えることができるもの</p>
-        <a name="about"></a>
-        <h2>会社概要</h2>
+
+        <h2 align="center" id="about">会社概要</h2>
         <p>株式会社hogehoge は、hogehoge を提供する会社です。</p>
-        <a name="services"></a>
-        <h2>事業内容</h2>
-        <p>hogehoge の提供</p>
-        <a name="news"></a>
-        <h2>ニュース</h2>
+        <table border="1" cellspacing="0" cellpadding="5">
+          <tr><td>会社名</td><td>株式会社hogehoge</td></tr>
+          <tr><td>設立</td><td>そのうち</td></tr>
+          <tr><td>所在地</td><td>大阪府大阪市</td></tr>
+          <tr><td>事業内容</td><td>hogehoge の提供</td></tr>
+        </table>
+
+
+        <h2 align="center" id="services">事業内容</h2>
+        <p>hogehoge の提供。</p>
+
+        <h2 align="center" id="news">ニュース</h2>
         <p>最新情報をお届けします。</p>
-        <a name="contact"></a>
-        <h2>お問い合わせ</h2>
-        <p>ご質問は<a href="mailto:info@hogehoge.co.jp">こちら</a>まで。</p>
+
+        <h2 align="center" id="contact">お問い合わせ</h2>
+
+        <form>
+          <p>お名前: <input type="text" id="name" size="20"></p>
+          <p>メール: <input type="text" id="email" size="30"></p>
+          <p>内　容: <textarea id="message" rows="4" cols="40"></textarea></p>
+          <p><input type="button" value="送信" onclick="location.href='mailto:info@hogehoge.co.jp?subject=' + document.getElementById('name').value + 'からの問い合わせ&body=メール: ' + document.getElementById('email').value + '%0A%0A内容:%0A' + document.getElementById('message').value;"></p>
+        </form>
+
       </td>
     </tr>
     <tr>
