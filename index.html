@@ -155,6 +155,29 @@
   </script>
   <!-- /キラキラマウスストーカー -->
 
+  <!-- /h1点滅 -->
+  <style>
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .blink {
+      animation-name: blink;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+  </style>
+  <script>
+    window.onload = function() {
+      const fonts = document.querySelectorAll('#home font');
+      fonts.forEach((el, i) => {
+        el.classList.add('blink');
+        el.style.animationDelay = (i * 0.4) + 's'; // 文字ごとに0.1秒ずつずらす
+      });
+    };
+    </script>
+    <!-- /h1点滅 -->
+
 </head>
 <body style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.8)), url('img/bg.jpg'); background-repeat: repeat;">
   <table width="1000" align="center" border="1" cellspacing="0" cellpadding="10" bgcolor="#FFFFFF">
@@ -246,7 +269,7 @@
                 <a href="#contact"><img src="img/button_contact.gif" width="240" height="50" alt="お問い合わせ" border="0"></a><br>
                 <br>
                 <div align="center">
-                  <img src="img/yellowcorn.gif" width="40" height="40" alt="工事中" border="0"><br>
+                  <img src="img/yellowcorn.gif" width="50" height="50" alt="工事中" border="0"><br>
                   <marquee behavior="scroll" direction="up" scrollamount="2" scrolldelay="42" loop="-1" height="20">
                     <font face="Arial" size="1" color="#FF0000">現在工事中です</font>
                   </marquee>
@@ -341,8 +364,11 @@
             <span style="font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; text-shadow: 2px 2px 2px #888888;">特徴</span>
           </div>
         </h2>
-
-        <p>hogehoge とは、そのものには意味の無いものであるが、なにものにも置き換えることができるもの</p>
+        <center>
+        <p>hogehoge とは<br>
+          そのものには意味の無いものであるが<br>
+          なにものにも置き換えることができるもの</p>
+        </center>
         <p style="text-align: right;"><a href="#home">▲上に戻る</a></p>
 
         <h2 id="about" align="center">
@@ -362,16 +388,13 @@
 
         <table border="2" cellpadding="5">
           <tr><td>会社名</td><td>
-            株式会社hogehoge<br>
-            （かぶしきがいしゃ　ほげほげ）
+            株式会社hogehoge （かぶしきがいしゃ　ほげほげ）
           </td></tr>
           <tr><td>設立</td><td>
             令和７年４月１日
           </td></tr>
           <tr><td>所在地</td><td>
-            532-0023<br>
-            大阪市淀川区十三東1丁目17-13 水交ビル4F<br>
-            JUSO Coworking内
+            532-0023 大阪市淀川区十三東1丁目17-13 水交ビル4F JUSO Coworking内
           </td></tr>
           <tr><td>事業内容</td><td>
             hogehoge の提供<br>
@@ -379,7 +402,8 @@
             デザイン<br>
             マーケティング<br>
             コンサルティング<br>
-            人材支援など
+            人材支援<br>
+            etc...
           </td></tr>
         </table>
 
