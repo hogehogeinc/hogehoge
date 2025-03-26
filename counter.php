@@ -3,7 +3,7 @@ header("Content-Type: image/png");
 
 // カウンターファイルのパス
 $counterFile = "counter.txt";
-$digitImage = "img/strip2.gif"; // 数字画像のパス
+$digitImage = "img/strip.gif"; // 数字画像のパス
 $frameThickness = 4; // フレームの太さ（ピクセル単位）
 
 // ファイルが存在しない場合は作成
