@@ -1,4 +1,10 @@
 <?php
+if (strpos($_SERVER['HTTP_REFERER'] ?? '', $_SERVER['HTTP_HOST']) === false) {
+    // 外部からの直リンクなどをブロック
+    header("HTTP/1.1 403 Forbidden");
+    exit;
+}
+
 header("Content-Type: image/png");
 
 // カウンターファイルのパス
@@ -14,7 +20,7 @@ if (!file_exists($counterFile)) {
 // カウンターの読み込みと更新
 $counter = (int)file_get_contents($counterFile);
 $counter++;
-file_put_contents($counterFile, $counter);
+file_put_contents($counterFile, $counter, LOCK_EX);
 
 // 数字ごとの座標計算
 $digitWidth = 15;
@@ -64,7 +70,11 @@ for ($i = $halfThickness; $i < $frameThickness; $i++) {
 }
 
 // 数字画像の読み込み
+if (!file_exists($digitImage)) {
+    die("数字画像が見つかりません");
+}
 $digitsImg = imagecreatefromgif($digitImage);
+
 
 // 各桁の数字を画像から切り出し、描画（枠の内側に配置）
 $digits = str_split((string)$counter);

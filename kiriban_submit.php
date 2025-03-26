@@ -3,9 +3,10 @@
 header("Content-Type: text/html; charset=UTF-8");
 date_default_timezone_set('Asia/Tokyo');
 
-// 入力取得とサニタイズ
-$name = trim($_POST['name']);
-$comment = trim($_POST['comment']);
+// 入力取得とサニタイズ 安全な値にエスケープ
+$name = htmlspecialchars(trim($_POST['name']), ENT_QUOTES, 'UTF-8');
+$comment = htmlspecialchars(trim($_POST['comment']), ENT_QUOTES, 'UTF-8');
+
 
 // カウンター値を取得（counter.txtから直接読み取り）
 $counter_file = "counter.txt";
