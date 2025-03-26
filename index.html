@@ -3,6 +3,7 @@
 <head>
 
   <title>株式会社hogehoge の公式ホームページへようこそ！</title>
+  <link rel="icon" type="image/png" href="img/icon.png">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <!-- OGP設定 -->
@@ -32,11 +33,135 @@
 
   <!-- Clarity tracking code for https://hogehoge.co.jp/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "oib236lx12");</script>
 
+  <!-- ★キラキラマウスストーカー -->
+<script type="text/javascript">
+  (function () {
+    var colour="#FF00FF"; // 色："random"で虹色。例："red"にすると赤固定
+    var sparkles=50;
+
+    var x=ox=400, y=oy=300;
+    var swide=window.innerWidth, shigh=window.innerHeight;
+    var sleft=sdown=0;
+    var tiny=[], star=[], starv=[], starx=[], stary=[], tinyx=[], tinyy=[], tinyv=[];
+
+    window.onload=function() {
+      for (var i=0; i<sparkles; i++) {
+        var rats=createDiv(3, 3);
+        rats.style.visibility="hidden";
+        document.body.appendChild(tiny[i]=rats);
+        starv[i]=0;
+        tinyv[i]=0;
+        var rats=createDiv(5, 5);
+        rats.style.backgroundColor="transparent";
+        rats.style.visibility="hidden";
+        var rlef=createDiv(1, 5);
+        var rdow=createDiv(5, 1);
+        rats.appendChild(rlef);
+        rats.appendChild(rdow);
+        rlef.style.top="2px"; rlef.style.left="0px";
+        rdow.style.top="0px"; rdow.style.left="2px";
+        document.body.appendChild(star[i]=rats);
+      }
+      sparkle();
+    };
+
+    function sparkle() {
+      var c;
+      if (x!=ox || y!=oy) {
+        ox=x; oy=y;
+        for (c=0; c<sparkles; c++) if (!starv[c]) {
+          star[c].style.left=(starx[c]=x)+"px";
+          star[c].style.top=(stary[c]=y)+"px";
+          star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+          star[c].childNodes[0].style.backgroundColor =
+          star[c].childNodes[1].style.backgroundColor =
+            (colour=="random") ? newColour() : colour;
+          star[c].style.visibility="visible";
+          starv[c]=50;
+          break;
+        }
+      }
+      for (c=0; c<sparkles; c++) {
+        if (starv[c]) update_star(c);
+        if (tinyv[c]) update_tiny(c);
+      }
+      setTimeout(sparkle, 40);
+    }
+
+    function update_star(i) {
+      if (--starv[i]==25)
+        star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+      if (starv[i]) {
+        stary[i] += 1 + Math.random()*3;
+        if (stary[i] < shigh + sdown) {
+          star[i].style.top = stary[i]+"px";
+          starx[i] += (i%5 - 2) / 5;
+          star[i].style.left = starx[i]+"px";
+        } else {
+          star[i].style.visibility="hidden"; starv[i]=0;
+        }
+      } else {
+        tinyv[i]=50;
+        tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+        tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+        tiny[i].style.width="2px";
+        tiny[i].style.height="2px";
+        tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
+        star[i].style.visibility="hidden";
+        tiny[i].style.visibility="visible";
+      }
+    }
+
+    function update_tiny(i) {
+      if (--tinyv[i]==25) {
+        tiny[i].style.width="1px"; tiny[i].style.height="1px";
+      }
+      if (tinyv[i]) {
+        tinyy[i] += 1 + Math.random()*3;
+        if (tinyy[i] < shigh + sdown) {
+          tiny[i].style.top = tinyy[i]+"px";
+          tinyx[i] += (i%5 - 2) / 5;
+          tiny[i].style.left = tinyx[i]+"px";
+        } else {
+          tiny[i].style.visibility="hidden"; tinyv[i]=0;
+        }
+      } else {
+        tiny[i].style.visibility="hidden";
+      }
+    }
+
+    document.onmousemove=function(e) {
+      y=e.pageY; x=e.pageX;
+      sdown=window.pageYOffset; sleft=window.pageXOffset;
+    };
+
+    function createDiv(height, width) {
+      var div=document.createElement("div");
+      div.style.position="absolute";
+      div.style.height=height+"px";
+      div.style.width=width+"px";
+      div.style.overflow="hidden";
+      return div;
+    }
+
+    function newColour() {
+      var c=[255, Math.floor(Math.random()*256), Math.floor(Math.random()*128)];
+      c.sort(() => 0.5 - Math.random());
+      return "rgb("+c[0]+", "+c[1]+", "+c[2]+")";
+    }
+  })();
+  </script>
+  <!-- /キラキラマウスストーカー -->
+
 </head>
-<body bgcolor="#FF00FF">
+<body style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.8)), url('img/bg.jpg'); background-repeat: repeat;">
   <table width="1000" align="center" border="1" cellspacing="0" cellpadding="10" bgcolor="#FFFFFF">
     <tr>
       <td colspan="2" align="center">
+
+          <!-- ロゴ画像 -->
+          <img src="img/icon.jpg" width="96" height="96" alt="株式会社hogehoge"><br>
+
         <h1 id="home">
           <font size="5" color="red">株</font>
           <font size="5" color="orange">式</font>
@@ -61,11 +186,45 @@
         <!-- アクセスカウンター -->
         <font size="2">あなたは <img src="counter.php" alt="アクセスカウンター"> 人目のお客さまです。</font>
         <!-- /アクセスカウンター -->
+        <br>
+        <!-- お気に入りに追加ボタン -->
+        <span style="font-family: 'MS Sans Serif', sans-serif;">
+          hogehoge のHPを
+          <span style="display:inline-block; vertical-align:middle;">
+            <table border="0" cellpadding="0" cellspacing="0" style="background-color:#C0C0C0;">
+              <tr>
+                <td style="border:2px solid #FFFFFF; border-bottom-color:#808080; border-right-color:#808080; padding:1px;">
+                  <a href="#" onclick="addBookmark(); return false;" style="display:inline-block; padding:1px 10px; background-color:#C0C0C0; color:#000000; text-decoration:none;">
+                    お気に入りに追加
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </span>
+          する
+        </span>
+
+        <script>
+        function addBookmark() {
+          var url = location.href;
+          var title = document.title;
+
+          if (window.external && ('AddFavorite' in window.external)) {
+            window.external.AddFavorite(url, title); // IE
+          } else if (window.sidebar && window.sidebar.addPanel) {
+            window.sidebar.addPanel(title, url, ''); // Firefox（古）
+          } else {
+            alert('Ctrl+D を押してブックマークに追加してください。');
+          }
+        }
+        </script>
+        <!-- /お気に入り追加ボタン -->
+
       </td>
     </tr>
     <!-- スクロールするメッセージ -->
     <tr>
-      <td colspan="2" align="center" bgcolor="#000000">
+      <td colspan="2" align="center" bgcolor="#000000" background="img/space.gif">
         <marquee scrollamount="5" behavior="alternate" direction="left">
           <font color="#FF00FF"><strong>🌟 株式会社hogehoge のウェブサイトへようこそ！ 🌟</strong></font>
         </marquee>
@@ -73,30 +232,48 @@
     </tr>
     <!-- /スクロールするメッセージ -->
     <tr>
-      <td width="240" valign="top" bgcolor="#ff9999">
-        <font face="Verdana">
-          <a href="#home">ホーム</a><br>
-          <a href="#about">会社概要</a><br>
-          <a href="#services">事業内容</a><br>
-          <a href="#news">ニュース</a><br>
-          <a href="#contact">お問い合わせ</a>
-        </font>
-        <br>
-        <br>
-        <!-- 工事中画像 -->
-        <div align="center">
-          <img src="img/yellowcorn.gif" alt="工事中" border="0">
-          <marquee behavior="scroll" direction="up" scrollamount="2" scrolldelay="42" loop="-1" height="20">
-            <div align="center">
-              <font face="Arial" size="1" color="#FF0000">現在工事中です</font>
-            </div>
-          </marquee>
-        </div>
-        <!-- /工事中画像 -->
+      <td width="240" height="1200px" background="img/line_pattern.gif" bgcolor="#ff00ff">
+        <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td valign="top">
+              <font face="Verdana">
+                <a href="#home">■　ホーム</a><br><br>
+                <a href="#about"><img src="img/button_about.gif" alt="会社概要" border="0"></a><br>
+                <a href="#services"><img src="img/button_services.gif" alt="事業内容" border="0"></a><br>
+                <a href="#news"><img src="img/button_news.gif" alt="ニュース" border="0"></a><br>
+                <a href="#contact"><img src="img/button_contact.gif" alt="お問い合わせ" border="0"></a><br>
+                <br>
+                <div align="center">
+                  <img src="img/yellowcorn.gif" alt="工事中" border="0"><br>
+                  <marquee behavior="scroll" direction="up" scrollamount="2" scrolldelay="42" loop="-1" height="20">
+                    <font face="Arial" size="1" color="#FF0000">現在工事中です</font>
+                  </marquee>
+                </div>
+              </font>
+            </td>
+          </tr>
+          <tr>
+            <td valign="bottom" align="center" height="1">
+              <!-- ☆キリ番ゲッター☆ -->
+              <div style="background-color:#00ffff; color:#0000ff; font-family:'ＭＳ Ｐゴシック',sans-serif; font-size:18px; font-weight:bold;">
+                ☆キリ番ゲッター☆
+              </div>
+            </td>
+          </tr>
+        </table>
       </td>
+
+
       <td valign="top">
 
         <p>ご覧いただき、誠にありがとうございます。</p>
+
+        <center><img src="img/kira_line1.gif" alt="星とアスタリスクのアニメライン"></center>
+        <!-- Special Thanks
+          このライン素材は「ぱたぱたアニメ館」様よりお借りしました。
+          https://pata2.jp/127/line/petit_line7.html
+          素敵な素材をありがとうございます！
+        -->
 
         <p>弊社のWeb サイトのURL（<a href="https://hogehoge.co.jp">hogehoge.co.jp</a>）を<br>
           URL のサンプルとしてご利用いただくことを歓迎しております。</p>
@@ -108,27 +285,55 @@
           ご想定の範囲の外でこのWeb サイトが表示されてしまうことが考えられます。<br>
           いかなる事象や損害、不具合について弊社は一切の責任を負うことはできませんのでご了承ください。</p>
 
-        <h2 align="center">特徴</h2>
-        <p>そのものには意味の無いものであるが、なにものにも置き換えることができるもの</p>
+        <h2 id="features" align="center">
+          <div style="display:inline-block; padding:5px 20px; font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; background-color: transparent; box-shadow: 5px 5px 5px #888888;">
+            <span style="font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; text-shadow: 2px 2px 2px #888888;">特徴</span>
+          </div>
+        </h2>
 
-        <h2 align="center" id="about">会社概要</h2>
+        <p>hogehoge とは、そのものには意味の無いものであるが、なにものにも置き換えることができるもの</p>
+
+        <h2 id="about" align="center">
+          <div style="display:inline-block; padding:5px 20px; font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; background-color: transparent; box-shadow: 5px 5px 5px #888888;">
+            <span style="font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; text-shadow: 2px 2px 2px #888888;">会社概要</span>
+          </div>
+        </h2>
         <p>株式会社hogehoge は、hogehoge を提供する会社です。</p>
-        <table border="1" cellspacing="0" cellpadding="5">
-          <tr><td>会社名</td><td>株式会社hogehoge</td></tr>
-          <tr><td>設立</td><td>そのうち</td></tr>
+        <center><img src="img/kira_line1.gif" alt="星とアスタリスクのアニメライン"></center>
+        <!-- Special Thanks
+          このライン素材は「ぱたぱたアニメ館」様よりお借りしました。
+          https://pata2.jp/127/line/petit_line7.html
+          素敵な素材をありがとうございます！
+        -->
+
+        <table border="2" cellpadding="5">
+          <tr><td>会社名</td><td>株式会社hogehoge<br>
+            （かぶしきがいしゃ　ほげほげ）</td></tr>
+          <tr><td>設立</td><td>令和７年４月１日</td></tr>
           <tr><td>所在地</td><td>大阪府大阪市</td></tr>
           <tr><td>事業内容</td><td>hogehoge の提供</td></tr>
         </table>
 
 
-        <h2 align="center" id="services">事業内容</h2>
+        <h2 id="services" align="center">
+          <div style="display:inline-block; padding:5px 20px; font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; background-color: transparent; box-shadow: 5px 5px 5px #888888;">
+            <span style="font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; text-shadow: 2px 2px 2px #888888;">事業内容</span>
+          </div>
+        </h2>
         <p>hogehoge の提供。</p>
 
-        <h2 align="center" id="news">ニュース</h2>
+        <h2 id="news" align="center">
+          <div style="display:inline-block; padding:5px 20px; font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; background-color: transparent; box-shadow: 5px 5px 5px #888888;">
+            <span style="font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; text-shadow: 2px 2px 2px #888888;">ニュース</span>
+          </div>
+        </h2>
         <p>最新情報をお届けします。</p>
 
-        <h2 align="center" id="contact">お問い合わせ</h2>
-
+        <h2 id="contact" align="center">
+          <div style="display:inline-block; padding:5px 20px; font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; background-color: transparent; box-shadow: 5px 5px 5px #888888;">
+            <span style="font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; text-shadow: 2px 2px 2px #888888;">お問い合わせ</span>
+          </div>
+        </h2>
         <form>
           <p>お名前: <input type="text" id="name" size="20"></p>
           <p>メール: <input type="text" id="email" size="30"></p>
@@ -140,6 +345,9 @@
     </tr>
     <tr>
       <td colspan="2" bgcolor="#ff0066" align="center" style="color: #ffff00;">
+        当サイトは原則リンクフリーです。リンクのご連絡も不要です。<br>
+        ただし、リンク元で生じた損害等については一切責任を負いません。<br>
+        <br>
         <small>2025 © 株式会社hogehoge All rights reserved.</small>
       </td>
     </tr>
