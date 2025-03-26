@@ -1,12 +1,11 @@
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-
 def create_button(text="ホーム", output="button.gif"):
-    # サイズ・デザイン調整
-    width, height = 240, 50
-    radius = 25
-    font_size = 24
-    line_spacing = 6
+    # サイズ・デザイン調整（横360×縦75）
+    width, height = 360, 75
+    radius = 38  # 角丸
+    font_size = 36
+    line_spacing = 8
     shadow_offset = 2
 
     # カラー設定
@@ -74,7 +73,7 @@ def create_button(text="ホーム", output="button.gif"):
 
 
 # 実行例
-# create_button("会社概要", "button_about.gif")
-# create_button("事業内容", "button_services.gif")
-# create_button("ニュース", "button_news.gif")
-# create_button("お問い合わせ", "button_contact.gif")
+create_button("会社概要", "button_about.gif")
+create_button("事業内容", "button_services.gif")
+create_button("ニュース", "button_news.gif")
+create_button("お問い合わせ", "button_contact.gif")
