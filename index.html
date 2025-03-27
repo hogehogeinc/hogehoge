@@ -168,15 +168,15 @@
     }
   </style>
   <script>
-    window.onload = function() {
+    window.addEventListener('load', function () {
       const fonts = document.querySelectorAll('#home font');
       fonts.forEach((el, i) => {
         el.classList.add('blink');
-        el.style.animationDelay = (i * 0.4) + 's'; // 文字ごとに0.1秒ずつずらす
+        el.style.animationDelay = (i * 0.4) + 's';
       });
-    };
-    </script>
-    <!-- /h1点滅 -->
+    });
+  </script>
+  <!-- /h1点滅 -->
 
 </head>
 <body style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.8)), url('img/bg.jpg'); background-repeat: repeat;">
@@ -275,10 +275,6 @@
                   </marquee>
                 </div>
               </font>
-            </td>
-          </tr>
-          <tr>
-            <td valign="bottom" align="center" height="1">
               <!-- ☆キリ番ゲッター☆ -->
               <div style="background-color:#00ffff; color:#0000ff; font-family:'ＭＳ Ｐゴシック',sans-serif; font-size:18px; font-weight:bold;">
                 ☆キリ番ゲッター☆
@@ -286,7 +282,8 @@
 
               <!-- 過去のゲッター表示 -->
               キリ番踏み逃げ厳禁(T-T)<br>
-              キリ番を踏んだ人は、︎キリ番BBSにカキコお願いします♪
+              キリ番を踏んだ人は、︎キリ番BBSにカキコお願いします♪♪<br>
+              <small>キリ番以外の方のカキコも大歓迎（荒らしは通報します）</small>
               <!-- フォーム -->
               <form action="kiriban_submit.php" method="post">
                 <div style="font-family:'ＭＳ Ｐゴシック'; font-size:12px; text-align:left; background-color:#ffe0ff; padding:5px; width:95%;">
@@ -298,7 +295,7 @@
                   <input type="text" name="name" id="name" size="20"><br>
 
                   <label for="comment">コメント（省略可）：</label><br>
-                  <input type="text" name="comment" id="comment" size="30"><br>
+                  <textarea name="comment" id="comment" rows="3" cols="30"></textarea><br>
 
                   <div align="center" style="margin-top:5px;">
                     <input type="submit" value="登録">
@@ -318,24 +315,26 @@
               <br>
               <br>
               <!-- 相互バナーリンク -->
+            </td>
+          </tr>
+          <tr>
+            <td valign="bottom" align="center" height="1">
               <center>リンク集</center>
-              <a href="https://linktr.ee/oilking" target="_blank">
-                <img src="img/sekiyuoh_homepage.gif" width="140" height="40" alt="石油王のホムペ" border="0">
-              </a>
-              <a href="https://tbshiki.com" target="_blank">
-                <img src="img/tbshiki.gif" width="140" height="40" alt="つぶ式" border="0">
-              </a>
-              <a href="https://www.designstudio35mm.com/" target="_blank">
-                <img src="img/ds35mm.gif" width="140" height="40" alt="DesignStudio 35mm" border="0">
-              </a>
+                <a href="https://linktr.ee/oilking" target="_blank">
+                  <img src="img/sekiyuoh_homepage.gif" width="140" height="40" alt="石油王のホムペ" border="0">
+                </a>
+                <a href="https://tbshiki.com" target="_blank">
+                  <img src="img/tbshiki.gif" width="140" height="40" alt="つぶ式" border="0">
+                </a>
+                <a href="https://www.designstudio35mm.com/" target="_blank">
+                  <img src="img/ds35mm.gif" width="140" height="40" alt="DesignStudio 35mm" border="0">
+                </a>
               <!-- /相互バナーリンク -->
-
 
             </td>
           </tr>
         </table>
       </td>
-
 
       <td valign="top">
 
