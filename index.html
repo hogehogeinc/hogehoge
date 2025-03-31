@@ -2,8 +2,26 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1000, user-scalable=yes">
   <title>株式会社hogehoge の公式ホームページへようこそ！</title>
+
+  <!--
+
+    　　　　 ＿＿＿_
+    　　　／ ⌒　　⌒ ＼
+    　 ／ 　癶 　　 癶　＼
+     ／:::⌒（__人__）⌒:::＼
+    |　　　　 |r┬-| 　　　　|
+     ＼　　　　`ー'´　　　／
+    _________________________________________________________________
+
+    あなたはソースコードを覗く「知っている人」ですね……。
+    hogehoge の真の意味を理解できる数少ない仲間です。
+    これからも仲良くしてください。
+    _________________________________________________________________
+-->
+
+
   <meta name="description" content="株式会社hogehogeの公式サイト。Web制作・アプリ開発・デザイン・マーケティング・人材支援など、多彩な事業で“自由な可能性”を提供します。レトロで楽しいデザインが特徴です。">
   <meta name="keywords" content="株式会社hogehoge, hogehoge, Web制作, アプリ開発, デザイン, マーケティング, コンサルティング, 人材支援, 教育研修, ITサポート">
   <meta name="author" content="株式会社hogehoge">
@@ -180,7 +198,7 @@
 
 </head>
 <body style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.8)), url('img/bg.jpg'); background-repeat: repeat;">
-  <table width="1000" align="center" border="1" cellspacing="0" cellpadding="10" bgcolor="#FFFFFF">
+  <table style="width: 100%; max-width: 1000px; margin: 0 auto;" border="1" cellspacing="0" cellpadding="10" bgcolor="#FFFFFF">
     <tr>
       <td colspan="2" align="center">
 
@@ -230,18 +248,32 @@
         </span>
 
         <script>
-        function addBookmark() {
-          var url = location.href;
-          var title = document.title;
+          function addBookmark() {
+            var url = location.href;
+            var title = document.title;
 
-          if (window.external && ('AddFavorite' in window.external)) {
-            window.external.AddFavorite(url, title); // IE
-          } else if (window.sidebar && window.sidebar.addPanel) {
-            window.sidebar.addPanel(title, url, ''); // Firefox（古）
-          } else {
-            alert('Ctrl+D を押してブックマークに追加してください。');
+            // モバイルデバイスの検出
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+            if (window.external && ('AddFavorite' in window.external)) {
+              window.external.AddFavorite(url, title); // IE
+            } else if (window.sidebar && window.sidebar.addPanel) {
+              window.sidebar.addPanel(title, url, ''); // Firefox（古）
+            } else {
+              // モバイルデバイス向けのメッセージ
+              if (isMobile) {
+                if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+                  alert('iOSの場合は、共有ボタン［□］→「ホーム画面に追加」からブックマークしてください。');
+                } else if (navigator.userAgent.match(/Android/i)) {
+                  alert('Androidの場合は、メニューボタン→星マークからブックマークしてください。');
+                } else {
+                  alert('お使いのブラウザでブックマーク機能を使用してください。');
+                }
+              } else {
+                alert('Ctrl+D を押してブックマークに追加してください。');
+              }
+            }
           }
-        }
         </script>
         <!-- /お気に入り追加ボタン -->
 
@@ -350,7 +382,7 @@
         <p>弊社のWeb サイトのURL（<a href="https://hogehoge.co.jp">hogehoge.co.jp</a>）を<br>
           URL のサンプルとしてご利用いただくことを歓迎しております。</p>
 
-        <p>承諾をいただく必要はございません。<br>
+        <p>承諾を得る必要はございません。<br>
           サンプル用のURL としてご自由にお使いください。</p>
 
           <p style="font-size: 13px; line-height: 1;">
@@ -394,6 +426,11 @@
           </td></tr>
           <tr><td>所在地</td><td>
             532-0023 大阪市淀川区十三東1丁目17-13 水交ビル4F JUSO Coworking内
+          </td></tr>
+          <tr><td>役員</td><td>
+            代表取締役 Chief Executive Officer 佐敷亮太<br>
+            取締役 Chief Design Officer 三宅敦<br>
+            取締役他1名
           </td></tr>
           <tr><td>事業内容</td><td>
             hogehoge の提供<br>
