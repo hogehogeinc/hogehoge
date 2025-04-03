@@ -19,7 +19,7 @@
     hogehoge の真の意味を理解できる数少ない仲間です。
     これからも仲良くしてください。
     _________________________________________________________________
--->
+  -->
 
 
   <meta name="description" content="株式会社hogehogeの公式サイト。Web制作・アプリ開発・デザイン・マーケティング・人材支援など、多彩な事業で“自由な可能性”を提供します。レトロで楽しいデザインが特徴です。">
@@ -54,122 +54,122 @@
   <!-- Clarity tracking code for https://hogehoge.co.jp/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "oib236lx12");</script>
 
   <!-- ★キラキラマウスストーカー -->
-<script type="text/javascript">
-  (function () {
-    var colour="#FF00FF"; // 色："random"で虹色。例："red"にすると赤固定
-    var sparkles=50;
+  <script type="text/javascript">
+    (function () {
+      var colour="#FF00FF"; // 色："random"で虹色。例："red"にすると赤固定
+      var sparkles=50;
 
-    var x=ox=400, y=oy=300;
-    var swide=window.innerWidth, shigh=window.innerHeight;
-    var sleft=sdown=0;
-    var tiny=[], star=[], starv=[], starx=[], stary=[], tinyx=[], tinyy=[], tinyv=[];
+      var x=ox=400, y=oy=300;
+      var swide=window.innerWidth, shigh=window.innerHeight;
+      var sleft=sdown=0;
+      var tiny=[], star=[], starv=[], starx=[], stary=[], tinyx=[], tinyy=[], tinyv=[];
 
-    window.onload=function() {
-      for (var i=0; i<sparkles; i++) {
-        var rats=createDiv(3, 3);
-        rats.style.visibility="hidden";
-        document.body.appendChild(tiny[i]=rats);
-        starv[i]=0;
-        tinyv[i]=0;
-        var rats=createDiv(5, 5);
-        rats.style.backgroundColor="transparent";
-        rats.style.visibility="hidden";
-        var rlef=createDiv(1, 5);
-        var rdow=createDiv(5, 1);
-        rats.appendChild(rlef);
-        rats.appendChild(rdow);
-        rlef.style.top="2px"; rlef.style.left="0px";
-        rdow.style.top="0px"; rdow.style.left="2px";
-        document.body.appendChild(star[i]=rats);
-      }
-      sparkle();
-    };
-
-    function sparkle() {
-      var c;
-      if (x!=ox || y!=oy) {
-        ox=x; oy=y;
-        for (c=0; c<sparkles; c++) if (!starv[c]) {
-          star[c].style.left=(starx[c]=x)+"px";
-          star[c].style.top=(stary[c]=y)+"px";
-          star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-          star[c].childNodes[0].style.backgroundColor =
-          star[c].childNodes[1].style.backgroundColor =
-            (colour=="random") ? newColour() : colour;
-          star[c].style.visibility="visible";
-          starv[c]=50;
-          break;
+      window.onload=function() {
+        for (var i=0; i<sparkles; i++) {
+          var rats=createDiv(3, 3);
+          rats.style.visibility="hidden";
+          document.body.appendChild(tiny[i]=rats);
+          starv[i]=0;
+          tinyv[i]=0;
+          var rats=createDiv(5, 5);
+          rats.style.backgroundColor="transparent";
+          rats.style.visibility="hidden";
+          var rlef=createDiv(1, 5);
+          var rdow=createDiv(5, 1);
+          rats.appendChild(rlef);
+          rats.appendChild(rdow);
+          rlef.style.top="2px"; rlef.style.left="0px";
+          rdow.style.top="0px"; rdow.style.left="2px";
+          document.body.appendChild(star[i]=rats);
         }
-      }
-      for (c=0; c<sparkles; c++) {
-        if (starv[c]) update_star(c);
-        if (tinyv[c]) update_tiny(c);
-      }
-      setTimeout(sparkle, 40);
-    }
+        sparkle();
+      };
 
-    function update_star(i) {
-      if (--starv[i]==25)
-        star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-      if (starv[i]) {
-        stary[i] += 1 + Math.random()*3;
-        if (stary[i] < shigh + sdown) {
-          star[i].style.top = stary[i]+"px";
-          starx[i] += (i%5 - 2) / 5;
-          star[i].style.left = starx[i]+"px";
+      function sparkle() {
+        var c;
+        if (x!=ox || y!=oy) {
+          ox=x; oy=y;
+          for (c=0; c<sparkles; c++) if (!starv[c]) {
+            star[c].style.left=(starx[c]=x)+"px";
+            star[c].style.top=(stary[c]=y)+"px";
+            star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+            star[c].childNodes[0].style.backgroundColor =
+            star[c].childNodes[1].style.backgroundColor =
+              (colour=="random") ? newColour() : colour;
+            star[c].style.visibility="visible";
+            starv[c]=50;
+            break;
+          }
+        }
+        for (c=0; c<sparkles; c++) {
+          if (starv[c]) update_star(c);
+          if (tinyv[c]) update_tiny(c);
+        }
+        setTimeout(sparkle, 40);
+      }
+
+      function update_star(i) {
+        if (--starv[i]==25)
+          star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+        if (starv[i]) {
+          stary[i] += 1 + Math.random()*3;
+          if (stary[i] < shigh + sdown) {
+            star[i].style.top = stary[i]+"px";
+            starx[i] += (i%5 - 2) / 5;
+            star[i].style.left = starx[i]+"px";
+          } else {
+            star[i].style.visibility="hidden"; starv[i]=0;
+          }
         } else {
-          star[i].style.visibility="hidden"; starv[i]=0;
+          tinyv[i]=50;
+          tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+          tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+          tiny[i].style.width="2px";
+          tiny[i].style.height="2px";
+          tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
+          star[i].style.visibility="hidden";
+          tiny[i].style.visibility="visible";
         }
-      } else {
-        tinyv[i]=50;
-        tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-        tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-        tiny[i].style.width="2px";
-        tiny[i].style.height="2px";
-        tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
-        star[i].style.visibility="hidden";
-        tiny[i].style.visibility="visible";
       }
-    }
 
-    function update_tiny(i) {
-      if (--tinyv[i]==25) {
-        tiny[i].style.width="1px"; tiny[i].style.height="1px";
-      }
-      if (tinyv[i]) {
-        tinyy[i] += 1 + Math.random()*3;
-        if (tinyy[i] < shigh + sdown) {
-          tiny[i].style.top = tinyy[i]+"px";
-          tinyx[i] += (i%5 - 2) / 5;
-          tiny[i].style.left = tinyx[i]+"px";
+      function update_tiny(i) {
+        if (--tinyv[i]==25) {
+          tiny[i].style.width="1px"; tiny[i].style.height="1px";
+        }
+        if (tinyv[i]) {
+          tinyy[i] += 1 + Math.random()*3;
+          if (tinyy[i] < shigh + sdown) {
+            tiny[i].style.top = tinyy[i]+"px";
+            tinyx[i] += (i%5 - 2) / 5;
+            tiny[i].style.left = tinyx[i]+"px";
+          } else {
+            tiny[i].style.visibility="hidden"; tinyv[i]=0;
+          }
         } else {
-          tiny[i].style.visibility="hidden"; tinyv[i]=0;
+          tiny[i].style.visibility="hidden";
         }
-      } else {
-        tiny[i].style.visibility="hidden";
       }
-    }
 
-    document.onmousemove=function(e) {
-      y=e.pageY; x=e.pageX;
-      sdown=window.pageYOffset; sleft=window.pageXOffset;
-    };
+      document.onmousemove=function(e) {
+        y=e.pageY; x=e.pageX;
+        sdown=window.pageYOffset; sleft=window.pageXOffset;
+      };
 
-    function createDiv(height, width) {
-      var div=document.createElement("div");
-      div.style.position="absolute";
-      div.style.height=height+"px";
-      div.style.width=width+"px";
-      div.style.overflow="hidden";
-      return div;
-    }
+      function createDiv(height, width) {
+        var div=document.createElement("div");
+        div.style.position="absolute";
+        div.style.height=height+"px";
+        div.style.width=width+"px";
+        div.style.overflow="hidden";
+        return div;
+      }
 
-    function newColour() {
-      var c=[255, Math.floor(Math.random()*256), Math.floor(Math.random()*128)];
-      c.sort(() => 0.5 - Math.random());
-      return "rgb("+c[0]+", "+c[1]+", "+c[2]+")";
-    }
-  })();
+      function newColour() {
+        var c=[255, Math.floor(Math.random()*256), Math.floor(Math.random()*128)];
+        c.sort(() => 0.5 - Math.random());
+        return "rgb("+c[0]+", "+c[1]+", "+c[2]+")";
+      }
+    })();
   </script>
   <!-- /キラキラマウスストーカー -->
 
@@ -314,7 +314,7 @@
 
               <!-- 過去のゲッター表示 -->
               キリ番踏み逃げ厳禁(T-T)<br>
-              キリ番を踏んだ人は、︎キリ番BBSにカキコお願いします♪♪<br>
+              キリ番を踏んだ人は、︎キリ番BBS にカキコお願いします♪♪<br>
               <small>キリ番以外の方のカキコも大歓迎（荒らしは通報します）</small>
               <!-- フォーム -->
               <form action="kiriban_submit.php" method="post">
@@ -340,7 +340,7 @@
               <br>
 
               <div style="background-color:#ffffff; margin-top:5px;">
-                <iframe src="kiriban.txt" title="過去のキリ番ゲッターリスト" width="100%" height="200" frameborder="0" style="font-family:'ＭＳ Ｐゴシック'; font-size:12px;"></iframe>
+                <iframe src="kiriban.txt" title="過去のキリ番ゲッターリスト" width="100%" height="300" frameborder="0" style="font-family:'ＭＳ Ｐゴシック'; font-size:12px;"></iframe>
               </div>
               <!-- /過去のゲッター表示 -->
               <!-- /☆キリ番ゲッター☆ -->
@@ -398,7 +398,7 @@
         <center>
         <p>hogehoge とは<br>
           そのものには意味の無いものであるが<br>
-          なにものにも置き換えることができるもの</p>
+          なにものにも置き換えることができるものである</p>
         </center>
         <p style="text-align: right;"><a href="#home">▲上に戻る</a></p>
 
@@ -438,7 +438,7 @@
             デザイン<br>
             マーケティング<br>
             コンサルティング<br>
-            人材支援<br>
+            キャリア支援<br>
             etc...
           </td></tr>
         </table>
@@ -481,7 +481,7 @@
 
         <p>
           私たちは、hogehoge を提供します。<br>
-          Web制作やアプリ開発からデザイン、マーケティング、コンサルティング、教育研修まで<br>
+          Web 制作やアプリ開発からデザイン、マーケティング、コンサルティング、教育研修まで<br>
           幅広い分野で「なにものにも置き換えることができるもの」を提供しています。
         </p>
 
@@ -493,13 +493,13 @@
         -->
 
         <ul>
-          <li><strong>Web・システム開発：</strong> サイト・アプリ制作、業務システム開発、保守まで対応。</li>
+          <li><strong>Web・システム開発：</strong> Web サイト・アプリ・システム開発、保守まで対応。</li>
           <li><strong>デザイン：</strong> グラフィック・UI/UX・情報設計など、伝わる・使いやすいを形に。</li>
-          <li><strong>マーケティング：</strong> SEO対策や広告運用、SNS活用で成果を後押し。</li>
-          <li><strong>コンサルティング：</strong> DX推進、EC戦略、営業支援などビジネスの課題を一緒に解決。</li>
-          <li><strong>人材・キャリア支援：</strong> 採用支援やキャリア相談、オンラインでのサポート。</li>
-          <li><strong>教育・研修：</strong> ITスキルやDX研修など、学びと成長の場を提供。</li>
-          <li><strong>ITサポート：</strong> AI導入支援、エンジニア派遣など現場を支えるサービスも充実。</li>
+          <li><strong>マーケティング：</strong> 顧客分析やSEO 、SNS 活用で成果を後押し。</li>
+          <li><strong>コンサルティング：</strong> DX 推進、EC 戦略、営業支援などビジネスの課題を一緒に解決。</li>
+          <li><strong>人材・キャリア支援：</strong> 採用支援やキャリア相談、オンラインでもサポート。</li>
+          <li><strong>教育・研修：</strong> IT スキルやDX 研修など、学びと成長の場を提供。</li>
+          <li><strong>IT サポート：</strong> AI 導入支援、エンジニア派遣など現場を支えるサービスも充実。</li>
         </ul>
         <p align="right"><a href="#home">▲上に戻る</a></p>
 
@@ -511,7 +511,7 @@
         </h2>
         <ul>
           <li>2025年4月1日　株式会社hogehoge 設立</li>
-          <li>2025年4月1日　Webサイト公開</li>
+          <li>2025年4月1日　Web サイト公開</li>
         </ul>
         <p align="right"><a href="#home">▲上に戻る</a></p>
 
