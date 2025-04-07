@@ -2,4 +2,6 @@
 kiriban.txt
 *.code-workspace
 
+/.well-known/
+/.well-known/*
 BingSiteAuth.xml
