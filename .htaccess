@@ -1,4 +1,4 @@
-<FilesMatch "^(counter|kiriban)\.txt$">
+<Files "counter.txt">
     Order Allow,Deny
     Deny from all
-</FilesMatch>
+</Files>
