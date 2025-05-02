@@ -1,6 +1,5 @@
 /log/
 /log/*
-kiriban.txt
 counter.txt
 *.code-workspace
 /.well-known/
