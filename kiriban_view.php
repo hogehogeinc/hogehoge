@@ -27,7 +27,7 @@ if (empty($lines)) {
 }
 
 // HTMLとして出力（レトロスタイル維持）
-echo '<div style="font-family:\'ＭＳ Ｐゴシック\'; font-size:12px; line-height:1.6; overflow-y:auto; height:300px; padding:5px;">';
+echo '<div style="font-family:\'ＭＳ Ｐゴシック\'; font-size:12px; line-height:1.6; overflow-y:auto; overflow-x:hidden; height:300px; padding:5px; word-wrap:break-word; word-break:break-all;">';
 
 foreach ($lines as $line) {
     $line = trim($line);
