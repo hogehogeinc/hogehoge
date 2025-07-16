@@ -1,5 +1,8 @@
 <?php
+// セキュリティヘッダー
 header("Content-Type: text/html; charset=UTF-8");
+header("X-Content-Type-Options: nosniff");
+header("X-Frame-Options: SAMEORIGIN"); // iframe内での表示を同一オリジンのみ許可
 
 $counter_file = "counter.txt";
 $number = 0;
