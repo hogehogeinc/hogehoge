@@ -27,6 +27,11 @@
   <meta name="author" content="株式会社hogehoge">
   <link rel="icon" type="image/png" href="img/icon.png">
 
+  <!-- セキュリティ対策 -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms; object-src 'none';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
   <!-- OGP設定 -->
   <meta property="og:title" content="株式会社hogehoge 公式ホームページ">
   <meta property="og:type" content="website">
@@ -323,17 +328,51 @@
               キリ番を踏んだ人は、︎キリ番BBS にカキコお願いします♪♪<br>
               <small>キリ番以外の方のカキコも大歓迎（荒らしは通報します）</small>
               <!-- フォーム -->
-              <form action="kiriban_submit.php" method="post">
+
+              <!-- キリ番バリデーション -->
+              <script>
+                // キリ番フォームのバリデーション（レトロスタイル）
+                function validateKiribanForm() {
+                  var name = document.getElementById('name').value;
+                  var comment = document.getElementById('comment').value;
+
+                  // 基本的な文字数チェック
+                  if (name.length > 50) {
+                    alert('お名前は50文字以内で入力してください。');
+                    return false;
+                  }
+
+                  if (comment.length > 200) {
+                    alert('コメントは200文字以内で入力してください。');
+                    return false;
+                  }
+
+                  // 危険な文字列のチェック
+                  var dangerous = ['<script', 'javascript:', 'data:', 'vbscript:'];
+                  for (var i = 0; i < dangerous.length; i++) {
+                    if (name.toLowerCase().indexOf(dangerous[i]) !== -1 ||
+                        comment.toLowerCase().indexOf(dangerous[i]) !== -1) {
+                      alert('使用できない文字が含まれています。');
+                      return false;
+                    }
+                  }
+
+                  return true;
+                }
+              </script>
+              <!-- /キリ番バリデーション -->
+
+              <form action="kiriban_submit.php" method="post" onsubmit="return validateKiribanForm();">
                 <div style="font-family:'ＭＳ Ｐゴシック'; font-size:12px; text-align:left; background-color:#ffe0ff; padding:5px; width:95%;">
                   <div style="margin-bottom:5px;">
                     <iframe src="counter_view.php" title="あなたが何番目か表示するカウンター" width="100%" height="40" frameborder="0" scrolling="no"></iframe>
                   </div>
 
                   <label for="name">お名前（省略可）：</label><br>
-                  <input type="text" name="name" id="name" size="20"><br>
+                  <input type="text" name="name" id="name" size="20" maxlength="50"><br>
 
                   <label for="comment">コメント（省略可）：</label><br>
-                  <textarea name="comment" id="comment" rows="3" cols="30"></textarea><br>
+                  <textarea name="comment" id="comment" rows="3" cols="30" maxlength="200"></textarea><br>
 
                   <div align="center" style="margin-top:5px;">
                     <input type="submit" value="登録">
@@ -346,7 +385,7 @@
               <br>
 
               <div style="background-color:#ffffff; margin-top:5px;">
-                <iframe src="kiriban.txt" title="過去のキリ番ゲッターリスト" width="100%" height="300" frameborder="0" style="font-family:'ＭＳ Ｐゴシック'; font-size:12px;"></iframe>
+                <iframe src="kiriban_view.php" title="過去のキリ番ゲッターリスト" width="100%" height="330" frameborder="0" style="font-family:'ＭＳ Ｐゴシック'; font-size:12px;"></iframe>
               </div>
               <!-- /過去のゲッター表示 -->
               <!-- /☆キリ番ゲッター☆ -->
@@ -604,23 +643,38 @@
           </div>
         </h2>
 
-        <form>
+        <form id="contactForm">
           <p>
             <label for="name">お名前:</label><br>
-            <input type="text" id="name" size="20">
+            <input type="text" id="name" name="name" size="20">
           </p>
           <p>
             <label for="email">メール:</label><br>
-            <input type="text" id="email" size="30">
+            <input type="text" id="email" name="email" size="30">
           </p>
           <p>
             <label for="message">内　容:</label><br>
-            <textarea id="message" rows="4" cols="40"></textarea>
+            <textarea id="message" name="message" rows="4" cols="40"></textarea>
           </p>
           <p>
-            <input type="button" value="送信" onclick="location.href='mailto:info@hogehoge.co.jp?subject=' + document.getElementById('name').value + 'からの問い合わせ&body=メール: ' + document.getElementById('email').value + '%0A%0A内容:%0A' + document.getElementById('message').value;">
+            <input type="button" value="送信" id="sendButton">
           </p>
         </form>
+
+        <script>
+          document.getElementById('sendButton').addEventListener('click', function () {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            const subject = encodeURIComponent(`${name}からの問い合わせ`);
+            const body = encodeURIComponent(`メール: ${email}\n\n内容:\n${message}`);
+
+            const mailtoLink = `mailto:info@hogehoge.co.jp?subject=${subject}&body=${body}`;
+            window.location.href = mailtoLink;
+          });
+        </script>
+
 
         <div align="right"><a href="#home">▲上に戻る</a></div>
 
