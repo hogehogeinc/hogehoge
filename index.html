@@ -1,109 +1,699 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-
-  <title>無題.html</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=1000, user-scalable=yes">
+  <title>株式会社hogehoge の公式ホームページへようこそ！</title>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-N7XRK6WYN9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!--
 
-  gtag('config', 'G-N7XRK6WYN9');
-</script>
+    　　　　 ＿＿＿_
+    　　　／ ⌒　　⌒ ＼
+    　 ／ 　癶 　　 癶　＼
+     ／:::⌒（__人__）⌒:::＼
+    |　　　　 |r┬-| 　　　　|
+     ＼　　　　`ー'´　　　／
+    _________________________________________________________________
 
-<!-- Clarity tracking code for https://hogehoge.co.jp/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "oib236lx12");</script>
+    あなたはソースコードを覗く「知っている人」ですね……。
+    hogehoge の真の意味を理解できる数少ない仲間です。
+    これからも仲良くしてください。
+    _________________________________________________________________
+  -->
+
+
+  <meta name="description" content="株式会社hogehogeの公式サイト。Web制作・アプリ開発・デザイン・マーケティング・人材支援など、多彩な事業で“自由な可能性”を提供します。レトロで楽しいデザインが特徴です。">
+  <meta name="keywords" content="株式会社hogehoge, hogehoge, Web制作, アプリ開発, デザイン, マーケティング, コンサルティング, 人材支援, 教育研修, ITサポート">
+  <meta name="author" content="株式会社hogehoge">
+  <link rel="icon" type="image/png" href="img/icon.png">
+
+  <!-- セキュリティ対策 -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms; object-src 'none';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- OGP設定 -->
+  <meta property="og:title" content="株式会社hogehoge 公式ホームページ">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hogehoge.co.jp">
+  <meta property="og:image" content="https://hogehoge.co.jp/img/ogp-image.jpg">
+  <meta property="og:description" content="株式会社hogehoge はhogehoge を提供する企業です。">
+  <meta property="og:site_name" content="株式会社hogehoge">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitterカード設定 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="株式会社hogehoge 公式ホームページ">
+  <meta name="twitter:description" content="株式会社hogehoge はhogehoge を提供する企業です。">
+  <meta name="twitter:image" content="https://hogehoge.co.jp/img/ogp-image.jpg">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N7XRK6WYN9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N7XRK6WYN9');
+  </script>
+
+  <!-- Clarity tracking code for https://hogehoge.co.jp/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "oib236lx12");</script>
+
+  <!-- ★キラキラマウスストーカー -->
+  <script type="text/javascript">
+    (function () {
+      var colour="#FF00FF"; // 色："random"で虹色。例："red"にすると赤固定
+      var sparkles=50;
+
+      var x=ox=400, y=oy=300;
+      var swide=window.innerWidth, shigh=window.innerHeight;
+      var sleft=sdown=0;
+      var tiny=[], star=[], starv=[], starx=[], stary=[], tinyx=[], tinyy=[], tinyv=[];
+
+      window.onload=function() {
+        for (var i=0; i<sparkles; i++) {
+          var rats=createDiv(3, 3);
+          rats.style.visibility="hidden";
+          document.body.appendChild(tiny[i]=rats);
+          starv[i]=0;
+          tinyv[i]=0;
+          var rats=createDiv(5, 5);
+          rats.style.backgroundColor="transparent";
+          rats.style.visibility="hidden";
+          var rlef=createDiv(1, 5);
+          var rdow=createDiv(5, 1);
+          rats.appendChild(rlef);
+          rats.appendChild(rdow);
+          rlef.style.top="2px"; rlef.style.left="0px";
+          rdow.style.top="0px"; rdow.style.left="2px";
+          document.body.appendChild(star[i]=rats);
+        }
+        sparkle();
+      };
+
+      function sparkle() {
+        var c;
+        if (x!=ox || y!=oy) {
+          ox=x; oy=y;
+          for (c=0; c<sparkles; c++) if (!starv[c]) {
+            star[c].style.left=(starx[c]=x)+"px";
+            star[c].style.top=(stary[c]=y)+"px";
+            star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+            star[c].childNodes[0].style.backgroundColor =
+            star[c].childNodes[1].style.backgroundColor =
+              (colour=="random") ? newColour() : colour;
+            star[c].style.visibility="visible";
+            starv[c]=50;
+            break;
+          }
+        }
+        for (c=0; c<sparkles; c++) {
+          if (starv[c]) update_star(c);
+          if (tinyv[c]) update_tiny(c);
+        }
+        setTimeout(sparkle, 40);
+      }
+
+      function update_star(i) {
+        if (--starv[i]==25)
+          star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+        if (starv[i]) {
+          stary[i] += 1 + Math.random()*3;
+          if (stary[i] < shigh + sdown) {
+            star[i].style.top = stary[i]+"px";
+            starx[i] += (i%5 - 2) / 5;
+            star[i].style.left = starx[i]+"px";
+          } else {
+            star[i].style.visibility="hidden"; starv[i]=0;
+          }
+        } else {
+          tinyv[i]=50;
+          tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+          tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+          tiny[i].style.width="2px";
+          tiny[i].style.height="2px";
+          tiny[i].style.backgroundColor = star[i].childNodes[0].style.backgroundColor;
+          star[i].style.visibility="hidden";
+          tiny[i].style.visibility="visible";
+        }
+      }
+
+      function update_tiny(i) {
+        if (--tinyv[i]==25) {
+          tiny[i].style.width="1px"; tiny[i].style.height="1px";
+        }
+        if (tinyv[i]) {
+          tinyy[i] += 1 + Math.random()*3;
+          if (tinyy[i] < shigh + sdown) {
+            tiny[i].style.top = tinyy[i]+"px";
+            tinyx[i] += (i%5 - 2) / 5;
+            tiny[i].style.left = tinyx[i]+"px";
+          } else {
+            tiny[i].style.visibility="hidden"; tinyv[i]=0;
+          }
+        } else {
+          tiny[i].style.visibility="hidden";
+        }
+      }
+
+      document.onmousemove=function(e) {
+        y=e.pageY; x=e.pageX;
+        sdown=window.pageYOffset; sleft=window.pageXOffset;
+      };
+
+      function createDiv(height, width) {
+        var div=document.createElement("div");
+        div.style.position="absolute";
+        div.style.height=height+"px";
+        div.style.width=width+"px";
+        div.style.overflow="hidden";
+        return div;
+      }
+
+      function newColour() {
+        var c=[255, Math.floor(Math.random()*256), Math.floor(Math.random()*128)];
+        c.sort(() => 0.5 - Math.random());
+        return "rgb("+c[0]+", "+c[1]+", "+c[2]+")";
+      }
+    })();
+  </script>
+  <!-- /キラキラマウスストーカー -->
+
+  <!-- /h1点滅 -->
+  <style>
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .blink {
+      animation-name: blink;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+  </style>
+  <script>
+    window.addEventListener('load', function () {
+      const fonts = document.querySelectorAll('#home font');
+      fonts.forEach((el, i) => {
+        el.classList.add('blink');
+        el.style.animationDelay = (i * 0.4) + 's';
+      });
+    });
+  </script>
+  <!-- /h1点滅 -->
 
 </head>
-<body bgcolor="#FF00FF">
-  <table width="1000" align="center" border="1" cellspacing="0" cellpadding="10" bgcolor="#FFFFFF">
+<body style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.8)), url('img/bg.jpg'); background-repeat: repeat;">
+  <table  width="100%" border="1" cellspacing="0" cellpadding="10" bgcolor="#FFFFFF" style="max-width: 1000px; margin: 0 auto;">
     <tr>
       <td colspan="2" align="center">
-        <a name="home"></a>
-        <h1>
-          <font size="3">
-            <font color="red">株</font>
-            <font color="orange">式</font>
-            <font color="yellow">会</font>
-            <font color="green">社</font>
-            <font color="blue">h</font>
-            <font color="indigo">o</font>
-            <font color="violet">g</font>
-            <font color="red">e</font>
-            <font color="orange">h</font>
-            <font color="yellow">o</font>
-            <font color="green">g</font>
-            <font color="blue">e</font>
-            <font color="indigo"> </font>
-            <font color="violet">へ</font>
-            <font color="red">よ</font>
-            <font color="orange">う</font>
-            <font color="yellow">こ</font>
-            <font color="green">そ</font>
-            <font color="blue">★</font>
-          </font>
+
+        <!-- ロゴ画像 -->
+        <a href="/"><img src="img/icon.jpg" width="96" height="96" alt="株式会社hogehoge"><br></a>
+        <!-- /ロゴ画像 -->
+
+        <h1 id="home">
+          <font size="5" color="red">株</font>
+          <font size="5" color="orange">式</font>
+          <font size="5" color="yellow">会</font>
+          <font size="5" color="green">社</font>
+          <font size="5" color="blue">h</font>
+          <font size="5" color="indigo">o</font>
+          <font size="5" color="violet">g</font>
+          <font size="5" color="red">e</font>
+          <font size="5" color="orange">h</font>
+          <font size="5" color="yellow">o</font>
+          <font size="5" color="green">g</font>
+          <font size="5" color="blue">e</font>
+          <font size="5" color="indigo"> </font>
+          <font size="5" color="violet">へ</font>
+          <font size="5" color="red">よ</font>
+          <font size="5" color="orange">う</font>
+          <font size="5" color="yellow">こ</font>
+          <font size="5" color="green">そ</font>
+          <font size="5" color="blue">★</font>
         </h1>
+
         <!-- アクセスカウンター -->
-        <font size="2">あなたは<img src="counter.php" alt="アクセス数" border="0">人目のお客さまです。</font>
+        <font size="2">あなたは <img src="counter.php" height="28" style="max-width: 100%;" alt="アクセスカウンター"> 人目のお客さまです。</font>
         <!-- /アクセスカウンター -->
+
+        <br>
+
+        <!-- お気に入りに追加ボタン -->
+        <span style="font-family: 'MS Sans Serif', sans-serif;">
+          hogehoge のHPを
+          <span style="display:inline-block; vertical-align:middle;">
+            <table border="0" cellpadding="0" cellspacing="0" bgcolor="#C0C0C0">
+              <tr>
+                <td style="border:2px solid #FFFFFF; border-bottom-color:#808080; border-right-color:#808080; padding:1px;">
+                  <a href="#" onclick="addBookmark(); return false;" style="display:inline-block; padding:1px 10px; background-color:#C0C0C0; color:#000000; text-decoration:none;">
+                    お気に入りに追加
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </span>
+          する
+        </span>
+
+        <script>
+          function addBookmark() {
+            var url = location.href;
+            var title = document.title;
+
+            // モバイルデバイスの検出
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+            if (window.external && ('AddFavorite' in window.external)) {
+              window.external.AddFavorite(url, title); // IE
+            } else if (window.sidebar && window.sidebar.addPanel) {
+              window.sidebar.addPanel(title, url, ''); // Firefox（古）
+            } else {
+              // モバイルデバイス向けのメッセージ
+              if (isMobile) {
+                if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+                  alert('iOSの場合は、共有ボタン［□］→「ホーム画面に追加」からブックマークしてください。');
+                } else if (navigator.userAgent.match(/Android/i)) {
+                  alert('Androidの場合は、メニューボタン→星マークからブックマークしてください。');
+                } else {
+                  alert('お使いのブラウザでブックマーク機能を使用してください。');
+                }
+              } else {
+                alert('Ctrl+D を押してブックマークに追加してください。');
+              }
+            }
+          }
+        </script>
+        <!-- /お気に入り追加ボタン -->
+
       </td>
     </tr>
+
     <!-- スクロールするメッセージ -->
     <tr>
-      <td colspan="2" align="center" bgcolor="#000000">
-        <marquee scrollamount="5" behavior="scroll" direction="left">
-          <font color="#FF00FF"><strong>株式会社hogehogeのウェブサイトへようこそ！</strong></font>
+      <td colspan="2" align="center" bgcolor="#000000" background="img/space.gif">
+        <marquee scrollamount="5" behavior="alternate" direction="left">
+          <font color="#FF00FF"><strong>🌟 株式会社hogehoge のウェブサイトへようこそ！ 🌟</strong></font>
         </marquee>
       </td>
     </tr>
     <!-- /スクロールするメッセージ -->
+
     <tr>
-      <td width="240" valign="top" bgcolor="#ff9999">
-        <font face="Verdana" size="2">
-          <b>メニュー</b><br>
-          <a href="#home">ホーム</a><br>
-          <a href="#about">会社概要</a><br>
-          <a href="#services">事業内容</a><br>
-          <a href="#news">ニュース</a><br>
-          <a href="#contact">お問い合わせ</a>
-        </font>
-        <br>
-        <br>
-        <!-- 工事中画像 -->
-        <center>
-          <img src="yellowcorn.gif" alt="工事中" border="0"><br>
-          <font face="Arial" size="1" color="#FF0000"><blink>現在工事中です</blink></font>
-        </center>
-        <!-- /工事中画像 -->
+      <td width="240" height="1200px" background="img/line_pattern.gif" bgcolor="#ff00ff">
+        <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td valign="top">
+              <font face="Verdana">
+                <a href="#home">■　ホーム</a><br><br>
+                <a href="#about"><img src="img/button_about.gif" width="240" height="50" alt="会社概要" border="0"></a><br>
+                <a href="#services"><img src="img/button_services.gif" width="240" height="50" alt="事業内容" border="0"></a><br>
+                <a href="#news"><img src="img/button_news.gif" width="240" height="50" alt="ニュース" border="0"></a><br>
+                <a href="#contact"><img src="img/button_contact.gif" width="240" height="50" alt="お問い合わせ" border="0"></a><br>
+                <br>
+                <div align="center">
+                  <img src="img/yellowcorn.gif" width="50" height="50" alt="工事中" border="0"><br>
+                  <marquee behavior="scroll" direction="up" scrollamount="2" scrolldelay="42" loop="-1" height="20">
+                    <font face="Arial" size="1" color="#FF0000">現在工事中です</font>
+                  </marquee>
+                </div>
+              </font>
+              <!-- ☆キリ番ゲッター☆ -->
+              <div style="background-color:#00ffff; color:#0000ff; font-family:'ＭＳ Ｐゴシック',sans-serif; font-size:18px; font-weight:bold;">
+                ☆キリ番ゲッター☆
+              </div>
+
+              <!-- 過去のゲッター表示 -->
+              キリ番踏み逃げ厳禁(T-T)<br>
+              キリ番を踏んだ人は、︎キリ番BBS にカキコお願いします♪♪<br>
+              <small>キリ番以外の方のカキコも大歓迎（荒らしは通報します）</small>
+              <!-- フォーム -->
+
+              <!-- キリ番バリデーション -->
+              <script>
+                // キリ番フォームのバリデーション（レトロスタイル）
+                function validateKiribanForm() {
+                  var name = document.getElementById('name').value;
+                  var comment = document.getElementById('comment').value;
+
+                  // 基本的な文字数チェック
+                  if (name.length > 50) {
+                    alert('お名前は50文字以内で入力してください。');
+                    return false;
+                  }
+
+                  if (comment.length > 200) {
+                    alert('コメントは200文字以内で入力してください。');
+                    return false;
+                  }
+
+                  // 危険な文字列のチェック
+                  var dangerous = ['<script', 'javascript:', 'data:', 'vbscript:'];
+                  for (var i = 0; i < dangerous.length; i++) {
+                    if (name.toLowerCase().indexOf(dangerous[i]) !== -1 ||
+                        comment.toLowerCase().indexOf(dangerous[i]) !== -1) {
+                      alert('使用できない文字が含まれています。');
+                      return false;
+                    }
+                  }
+
+                  return true;
+                }
+              </script>
+              <!-- /キリ番バリデーション -->
+
+              <form action="kiriban_submit.php" method="post" onsubmit="return validateKiribanForm();">
+                <div style="font-family:'ＭＳ Ｐゴシック'; font-size:12px; text-align:left; background-color:#ffe0ff; padding:5px; width:95%;">
+                  <div style="margin-bottom:5px;">
+                    <iframe src="counter_view.php" title="あなたが何番目か表示するカウンター" width="100%" height="40" frameborder="0" scrolling="no"></iframe>
+                  </div>
+
+                  <label for="name">お名前（省略可）：</label><br>
+                  <input type="text" name="name" id="name" size="20" maxlength="50"><br>
+
+                  <label for="comment">コメント（省略可）：</label><br>
+                  <textarea name="comment" id="comment" rows="3" cols="30" maxlength="200"></textarea><br>
+
+                  <div align="center" style="margin-top:5px;">
+                    <input type="submit" value="登録">
+                  </div>
+                </div>
+              </form>
+
+              <!-- /フォーム -->
+
+              <br>
+
+              <div style="background-color:#ffffff; margin-top:5px;">
+                <iframe src="kiriban_view.php" title="過去のキリ番ゲッターリスト" width="100%" height="330" frameborder="0" style="font-family:'ＭＳ Ｐゴシック'; font-size:12px;"></iframe>
+              </div>
+              <!-- /過去のゲッター表示 -->
+              <!-- /☆キリ番ゲッター☆ -->
+
+              <br>
+              <br>
+
+              <!-- 相互バナーリンク -->
+            </td>
+          </tr>
+          <tr>
+            <td valign="bottom" align="center" height="1">
+              <center>リンク集</center>
+                <a href="https://linktr.ee/oilking" target="_blank">
+                  <img src="img/sekiyuoh_homepage.gif" width="140" height="40" alt="石油王のホムペ" border="0">
+                </a>
+                <a href="https://tbshiki.com" target="_blank">
+                  <img src="img/tbshiki.gif" width="140" height="40" alt="つぶ式" border="0">
+                </a>
+                <a href="https://www.designstudio35mm.com/" target="_blank">
+                  <img src="img/ds35mm.gif" width="140" height="40" alt="DesignStudio 35mm" border="0">
+                </a>
+              <!-- /相互バナーリンク -->
+
+            </td>
+          </tr>
+        </table>
       </td>
+
       <td valign="top">
 
+        <p>ご覧いただき、誠にありがとうございます。</p>
 
-        <a name="home"></a>
-        <h2>特徴</h2>
-        <p>そのものには意味の無いものであるが、なにものにも置き換えることができるもの</p>
-        <a name="about"></a>
-        <h2>会社概要</h2>
-        <p>株式会社hogehogeは、hogehogeを提供する会社です。</p>
-        <a name="services"></a>
-        <h2>事業内容</h2>
-        <p>hogehogeの提供</p>
-        <a name="news"></a>
-        <h2>ニュース</h2>
-        <p>最新情報をお届けします。</p>
-        <a name="contact"></a>
-        <h2>お問い合わせ</h2>
-        <p>ご質問は<a href="mailto:info@hogehoge.co.jp">こちら</a>まで。</p>
+        <center><img src="img/kira_line1.gif" width="233" height="22" alt="星とアスタリスクのアニメライン"></center>
+        <!-- Special Thanks
+          このライン素材は「ぱたぱたアニメ館」様よりお借りしました。
+          https://pata2.jp/127/line/petit_line7.html
+          素敵な素材をありがとうございます！
+        -->
+
+        <p>弊社のWeb サイトのURL（<a href="https://hogehoge.co.jp">hogehoge.co.jp</a>）を<br>
+          URL のサンプルとしてご利用いただくことを歓迎しております。</p>
+
+        <p>承諾を得る必要はございません。<br>
+          サンプル用のURL としてご自由にお使いください。</p>
+
+        <p style="font-size: 13px; line-height: 1;">
+        ただし、以下の点についてご留意いただきますようお願いいたします。<br>
+        ご想定の範囲の外でこのWeb サイトが表示されてしまうことが考えられます。<br>
+        いかなる事象や損害、不具合について弊社は一切の責任を負うことはできませんのでご了承ください。</p>
+
+        <h2 id="whatis" align="center">
+          <div style="display:inline-block; padding:5px 20px; font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; background-color: transparent; box-shadow: 5px 5px 5px #888888;">
+            <span style="text-shadow: 2px 2px 2px #888888;">
+              hogehoge とは
+            </span>
+          </div>
+        </h2>
+
+
+
+          <p>
+              「hogehoge」は、日本語圏でのプログラミングやIT業界でよく使われる仮の名前、プレースホルダー、またはメタ構文変数の一つです。<a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E6%A7%8B%E6%96%87%E5%A4%89%E6%95%B0" target="_blank">.</a><br>
+              プログラムの例やサンプルコード、ドキュメントを作成する際に、具体的な値や実際の名前を使う必要がない場合、変数名や関数名として使用されます。
+          </p>
+
+          <h3>言語圏別の代表的なメタ構文変数</h3>
+
+            <ul>
+              <li><b>英語圏：</b>foo, bar, baz</li>
+              <li><b>フランス語圏：</b>toto, tete, titi, tutu, tata</li>
+              <li><b>イタリア語圏：</b>pippo</li>
+              <li><b>ドイツ語圏：</b>bla, blub</li>
+            </ul>
+
+            <p>
+                プログラミング言語は多くが英語をベースに記述されるため、「foo」「bar」「baz」が広く使われています。<br>
+                日本では特に「hoge（ほげ）」「fuga（ふが）」「piyo（ぴよ）」、およびそれらを繰り返した「hogehoge（ほげほげ）」などが好まれる傾向にあります。
+            </p>
+
+            <br>
+            <br>
+            <center>
+              あなたはhogehoge について記されている文献を見つけられるだろうか……。<br>
+              <br>
+              <a href="#features" style="color: #0000FF;">＊</a>&nbsp;&nbsp;&nbsp;
+              <a href="#features" style="color: #0000FF;">＊</a>&nbsp;&nbsp;&nbsp;
+              <a href="#features" style="color: #0000FF;">＊</a>&nbsp;&nbsp;&nbsp;
+              <a href="#features" style="color: #0000FF;">＊</a>&nbsp;&nbsp;&nbsp;
+              <a href="#features" style="color: #0000FF;">＊</a>&nbsp;&nbsp;&nbsp;
+              <a href="#features" style="color: #0000FF;">＊</a>&nbsp;&nbsp;&nbsp;
+              <a href="#features" style="color: #0000FF;">＊</a>&nbsp;&nbsp;&nbsp;
+              <a href="#features" style="color: #0000FF;">＊</a>&nbsp;&nbsp;&nbsp;
+              <a href="#features" style="color: #0000FF;">○</a>&nbsp;&nbsp;&nbsp;
+              <a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%BF%E6%A7%8B%E6%96%87%E5%A4%89%E6%95%B0#:~:text=%E3%81%BB%E3%81%92%E3%82%89%EF%BC%89%E3%80%8D%E3%80%8C-,hogehoge,-%EF%BC%88%E3%81%BB%E3%81%92" target="_blank" style="color: #0000FF;">＊</a>&nbsp;&nbsp;&nbsp;
+              <a href="#features" style="color: #0000FF;">＊</a>&nbsp;&nbsp;&nbsp;
+              <a href="#features" style="color: #0000FF;">＊</a>
+            </center>
+            <br>
+            <br>
+
+        <h2 id="features" align="center">
+          <div style="display:inline-block; padding:5px 20px; font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; background-color: transparent; box-shadow: 5px 5px 5px #888888;">
+            <span style="text-shadow: 2px 2px 2px #888888;">
+              株式会hogehoge が考える<br>hogehoge の特徴
+            </span>
+          </div>
+        </h2>
+
+        <center>
+        <p>hogehoge とは<br>
+          そのものには意味の無いものであるが<br>
+          なにものにも置き換えることができるものである</p>
+        </center>
+
+        <p style="text-align: right;"><a href="#home">▲上に戻る</a></p>
+
+        <h2 id="about" align="center">
+          <div style="display:inline-block; padding:5px 20px; font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; background-color: transparent; box-shadow: 5px 5px 5px #888888;">
+            <span style="text-shadow: 2px 2px 2px #888888;">
+              会社概要
+            </span>
+          </div>
+        </h2>
+
+        <p>株式会社hogehoge は、hogehoge を提供する会社です。</p>
+
+        <center><img src="img/kira_line1.gif" width="233" height="22" alt="星とアスタリスクのアニメライン"></center>
+        <!-- Special Thanks
+          このライン素材は「ぱたぱたアニメ館」様よりお借りしました。
+          https://pata2.jp/127/line/petit_line7.html
+          素敵な素材をありがとうございます！
+        -->
+
+        <table border="2" cellpadding="5" width="100%">
+          <tr><td>会社名</td><td>
+            株式会社hogehoge （かぶしきがいしゃ　ほげほげ）
+          </td></tr>
+          <tr><td>設立</td><td>
+            令和７年４月１日
+          </td></tr>
+          <tr><td>法人番号</td><td>
+            3120001274396<br>
+            -> <a href="https://www.houjin-bangou.nta.go.jp/henkorireki-johoto.html?selHouzinNo=3120001274396" target="_blank">国税庁法人番号公表サイト</a>
+          </td></tr>
+          <tr><td>所在地</td><td>
+            532-0023<br>
+            大阪市淀川区十三東1丁目17-13 水交ビル403号<br>
+            (JUSO Coworking内)
+          </td></tr>
+          <tr><td>役員</td><td>
+            代表取締役 Chief Executive Officer 佐敷亮太<br>
+            取締役 Chief Design Officer 三宅敦<br>
+            取締役他1名
+          </td></tr>
+          <tr><td>事業内容</td><td>
+            hogehoge の提供<br>
+            Web・システム開発<br>
+            デザイン<br>
+            マーケティング<br>
+            コンサルティング<br>
+            キャリア支援<br>
+            etc...
+          </td></tr>
+        </table>
+
+        <center><img src="img/kira_line1.gif" width="233" height="22" alt="星とアスタリスクのアニメライン"></center>
+        <!-- Special Thanks
+          このライン素材は「ぱたぱたアニメ館」様よりお借りしました。
+          https://pata2.jp/127/line/petit_line7.html
+          素敵な素材をありがとうございます！
+        -->
+
+        <h3>Mission（使命）</h3>
+        <p>人々が自由に可能性を追求できる世界を創り出す。</p>
+
+        <h3>Vision（目指す姿）</h3>
+        <p>いつでも自らの選択で未来を切り拓ける社会を実現する。</p>
+
+        <h3>Values（価値観）</h3>
+        <ul>
+          <li><strong>機会：</strong> すべての人に等しくチャンスを。状況に関わらず、可能性を広げるサポートを。</li>
+          <li><strong>選択：</strong> あなたの未来は、あなたの選択で決まります。その力を尊重します。</li>
+          <li><strong>伴走：</strong> 自由と選択を大切にしながら、共に歩み、未来を創ります。</li>
+        </ul>
+
+        <div align="right"><a href="#home">▲上に戻る</a></div>
+
+        <h2 id="services" align="center">
+          <div style="display:inline-block; padding:5px 20px; font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; background-color: transparent; box-shadow: 5px 5px 5px #888888;">
+            <span style="text-shadow: 2px 2px 2px #888888;">
+              事業内容
+            </span>
+          </div>
+        </h2>
+
+        <p>hogehoge の提供。</p>
+
+        <center><img src="img/kira_line1.gif" width="233" height="22" alt="星とアスタリスクのアニメライン"></center>
+        <!-- Special Thanks
+          このライン素材は「ぱたぱたアニメ館」様よりお借りしました。
+          https://pata2.jp/127/line/petit_line7.html
+          素敵な素材をありがとうございます！
+        -->
+
+        <p>
+          私たちは、hogehoge を提供します。<br>
+          Web 制作やアプリ開発からデザイン、マーケティング、コンサルティング、教育研修まで<br>
+          幅広い分野で「なにものにも置き換えることができるもの」を提供しています。
+        </p>
+
+        <center><img src="img/kira_line1.gif" width="233" height="22" alt="星とアスタリスクのアニメライン"></center>
+        <!-- Special Thanks
+          このライン素材は「ぱたぱたアニメ館」様よりお借りしました。
+          https://pata2.jp/127/line/petit_line7.html
+          素敵な素材をありがとうございます！
+        -->
+
+        <ul>
+          <li><strong>Web・システム開発：</strong> Web サイト・アプリ・システム開発、保守まで対応。</li>
+          <li><strong>デザイン：</strong> グラフィック・UI/UX・情報設計など、伝わる・使いやすいを形に。</li>
+          <li><strong>マーケティング：</strong> 顧客分析やSEO 、SNS 活用で成果を後押し。</li>
+          <li><strong>コンサルティング：</strong> DX 推進、EC 戦略、営業支援などビジネスの課題を一緒に解決。</li>
+          <li><strong>人材・キャリア支援：</strong> 採用支援やキャリア相談、オンラインでもサポート。</li>
+          <li><strong>教育・研修：</strong> IT スキルやDX 研修など、学びと成長の場を提供。</li>
+          <li><strong>IT サポート：</strong> AI 導入支援、エンジニア派遣など現場を支えるサービスも充実。</li>
+        </ul>
+
+        <div align="right"><a href="#home">▲上に戻る</a></div>
+
+
+
+        <h2 id="news" align="center">
+          <div style="display:inline-block; padding:5px 20px; font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; background-color: transparent; box-shadow: 5px 5px 5px #888888;">
+            <span style="text-shadow: 2px 2px 2px #888888;">
+              ニュース
+            </span>
+          </div>
+        </h2>
+
+        <ul>
+          <li>2025年6月24日　<a href="https://www.mebic.com/cluster/hogehoge.html" target="_blank">MEBIC クリエイティブクラスター</a> に掲載していただきました。</li>
+          <li>2025年4月3日　<a href="https://x.com/hashtag/%E3%83%90%E3%82%AB%E6%AF%9B%E3%83%A9%E3%82%B8%E3%82%AA" target="_blank">#バカ毛ラジオ</a> でこのホームページを取り上げていただきました。</li>
+          <li>2025年4月1日　株式会社hogehoge 設立</li>
+          <li>2025年4月1日　Web サイト公開</li>
+        </ul>
+        <div align="right"><a href="#home">▲上に戻る</a></div>
+
+
+        <h2 id="contact" align="center">
+          <div style="display:inline-block; padding:5px 20px; font-style: italic; font-weight: bold; font-family: Arial, sans-serif; font-size: 24px; color: #000000; background-color: transparent; box-shadow: 5px 5px 5px #888888;">
+            <span style="text-shadow: 2px 2px 2px #888888;">
+              お問い合わせ
+            </span>
+          </div>
+        </h2>
+
+        <form id="contactForm">
+          <p>
+            <label for="name">お名前:</label><br>
+            <input type="text" id="name" name="name" size="20">
+          </p>
+          <p>
+            <label for="email">メール:</label><br>
+            <input type="text" id="email" name="email" size="30">
+          </p>
+          <p>
+            <label for="message">内　容:</label><br>
+            <textarea id="message" name="message" rows="4" cols="40"></textarea>
+          </p>
+          <p>
+            <input type="button" value="送信" id="sendButton">
+          </p>
+        </form>
+
+        <script>
+          document.getElementById('sendButton').addEventListener('click', function () {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            const subject = encodeURIComponent(`${name}からの問い合わせ`);
+            const body = encodeURIComponent(`メール: ${email}\n\n内容:\n${message}`);
+
+            const mailtoLink = `mailto:info@hogehoge.co.jp?subject=${subject}&body=${body}`;
+            window.location.href = mailtoLink;
+          });
+        </script>
+
+
+        <div align="right"><a href="#home">▲上に戻る</a></div>
+
       </td>
     </tr>
     <tr>
-      <td colspan="2" bgcolor="#ff0066" align="center" style="color: #ffff00;">
-        <small>2024 © 株式会社hogehoge</small>
+      <td colspan="2" bgcolor="#000000" align="center" style="color: #ffffff;">
+        当サイトは原則リンクフリーです。リンクのご連絡も不要です。<br>
+        ただし、リンク元で生じた損害等については一切責任を負いません。<br>
         <br>
 
+        <small>リンクの際は以下バナーをご使用ください。</small>
+        <br>
+        <a href="/">
+          <img src="img/hogehoge_banner.gif" width="140" height="40" alt="株式会社hogehoge" border="0">
+        </a>
+
+        <br>
+        <small>2025 © 株式会社hogehoge All rights reserved.</small>
       </td>
     </tr>
   </table>

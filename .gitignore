@@ -1,0 +1,8 @@
+*.code-workspace
+log/
+/log/*
+counter.txt
+kiriban.txt
+/.well-known/
+/.well-known/*
+BingSiteAuth.xml

@@ -1,7 +1,30 @@
-SetEnvIf Request_URI ".*" Ngx_Cache_NoCacheMode=off
-SetEnvIf Request_URI ".*" Ngx_Cache_AllCacheMode
+# セキュリティ設定
 
-<Files "counter.txt">
-    Order Allow,Deny
-    Deny from all
+# テキストファイルへの直接アクセスを制限
+<Files "*.txt">
+    Require all denied
 </Files>
+
+# ディレクトリリスト表示を無効化
+Options -Indexes
+
+# セキュリティヘッダーの設定
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options SAMEORIGIN
+    Header always set Referrer-Policy strict-origin-when-cross-origin
+</IfModule>
+
+# PHPエラー表示を無効化
+php_flag display_errors Off
+php_flag log_errors On
+
+# ファイルアップロード制限
+php_value upload_max_filesize 1M
+php_value post_max_size 1M
+
+# セッション設定の強化
+php_value session.cookie_httponly 1
+php_value session.use_strict_mode 1
+php_value session.cookie_secure 1
+php_value session.cookie_samesite Strict
