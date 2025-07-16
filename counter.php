@@ -1,11 +1,16 @@
 <?php
-if (strpos($_SERVER['HTTP_REFERER'] ?? '', $_SERVER['HTTP_HOST']) === false) {
-    // 外部からの直リンクなどをブロック
+// リファラーチェック
+$referer = $_SERVER['HTTP_REFERER'] ?? '';
+$host = $_SERVER['HTTP_HOST'] ?? '';
+if (!empty($referer) && strpos($referer, $host) === false) {
     header("HTTP/1.1 403 Forbidden");
     exit;
 }
 
+// セキュリティヘッダー
 header("Content-Type: image/png");
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("X-Content-Type-Options: nosniff");
 
 // カウンターファイルのパス
 $counterFile = "counter.txt";
@@ -71,7 +76,9 @@ for ($i = $halfThickness; $i < $frameThickness; $i++) {
 
 // 数字画像の読み込み
 if (!file_exists($digitImage)) {
-    die("数字画像が見つかりません");
+    // エラー情報を漏洩させない
+    header("HTTP/1.1 500 Internal Server Error");
+    exit;
 }
 $digitsImg = imagecreatefromgif($digitImage);
 
